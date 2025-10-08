@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Lab – Hello from Hariharan</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #232526, #414345);
+      color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 30px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #00ffcc;
+      text-shadow: 2px 2px 10px rgba(0, 255, 204, 0.3);
+      animation: fadeIn 2s ease;
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    section {
+      width: 90%;
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.15);
+      margin-bottom: 30px;
+      transition: 0.4s ease;
+    }
+
+    section:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(0, 255, 204, 0.3);
+    }
+
+    h2 {
+      color: #00ffcc;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-left: 20px;
+      line-height: 1.8;
+    }
+
+    code {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 3px 6px;
+      border-radius: 4px;
+      color: #fff176;
+      font-family: Consolas, monospace;
+    }
+
+    button {
+      background-color: #00ffcc;
+      color: #000;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s ease;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #0ef0b1;
+      transform: scale(1.05);
+    }
+
+    #gitTip {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: #ffd369;
+      min-height: 30px;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Hello from Hariharan! 👋</h1>
+    <p class="subtitle">Welcome to my Git Lab Experiment Project</p>
+  </header>
+
+  <section>
+    <h2>🎯 Aim of This Experiment</h2>
+    <p>To explore and understand real-world Git and GitHub workflows — creating repositories, branches, commits, pull requests, and resolving merge conflicts using VS Code.</p>
+  </section>
+
+  <section>
+    <h2>⚙️ Git Features Demonstrated</h2>
+    <ul>
+      <li>✅ Initialize a new repository (<code>git init</code>)</li>
+      <li>✅ Check repo status (<code>git status</code>)</li>
+      <li>✅ Add files to staging (<code>git add .</code>)</li>
+      <li>✅ Commit changes (<code>git commit -m "message"</code>)</li>
+      <li>✅ Create branches (<code>git checkout -b feature-branch</code>)</li>
+      <li>✅ Push to GitHub (<code>git push origin feature-branch</code>)</li>
+      <li>✅ Merge and resolve conflicts</li>
+      <li>✅ Fork and contribute</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🧠 Try a Random Git Tip!</h2>
+    <p>Click the button below to get a random Git command tip:</p>
+    <button onclick="showTip()">Show Git Tip</button>
+    <p id="gitTip"></p>
+  </section>
+
+  <section>
+    <h2>📘 About This Project</h2>
+    <p>This project is designed to help practice Git commands visually. Each time you change a section, commit your work, or add a new feature, you’ll simulate real-world Git collaboration just like developers do on GitHub.</p>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ by Hariharan | Git Lab Experiment 2025</p>
+  </footer>
+
+  <script>
+    const tips = [
+      "Use 'git log --oneline' to view commit history in short form.",
+      "Run 'git diff' to see what’s changed before committing.",
+      "Use 'git branch -a' to see all branches (local + remote).",
+      "Run 'git restore filename' to undo unstaged changes.",
+      "Use 'git merge --abort' if a merge goes wrong.",
+      "Run 'git pull --rebase' to sync your branch cleanly.",
+      "Use 'git stash' to temporarily save uncommitted work.",
+      "Run 'git remote -v' to see your GitHub repo connections.",
+      "Use 'git push origin main' to publish changes online.",
+      "Run 'git blame file.txt' to see who last changed each line!"
+    ];
+
+    function showTip() {
+      const randomIndex = Math.floor(Math.random() * tips.length);
+      document.getElementById("gitTip").innerText = tips[randomIndex];
+    }
+  </script>
+</body>
+</html>
