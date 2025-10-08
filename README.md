@@ -1,1 +1,1 @@
-# SE-LAB
+# Git project Software Engineering
